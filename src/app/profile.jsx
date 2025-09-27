@@ -312,31 +312,31 @@ export default function Portfolio() {
           <h2 className="text-xl md:text-2xl font-bold">Get in touch</h2>
           <p className="mt-3 text-neutral-700">Open to opportunities in embedded hardware, validation, and functional safety.</p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
-            <a 
-              href="mailto:yshraddha92@gmail.com" 
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 px-4 py-2 text-white font-medium shadow-lg hover:from-emerald-600 hover:to-teal-700 hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-            >
-              <EmailIcon />
-              Email
-            </a>
-            <a 
-              href="https://calendly.com/" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 text-white font-medium shadow-lg hover:from-blue-600 hover:to-indigo-700 hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-            >
-              <CalendarIcon />
-              Schedule Appointment
-            </a>
-            <a 
-              href="https://shraddhayamyar.com" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 px-4 py-2 text-white font-medium shadow-lg hover:from-violet-600 hover:to-purple-700 hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-            >
-              <GlobeIcon />
-              Website
-            </a>
+              <a
+                  href="https://calendly.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 text-white font-medium shadow-lg hover:from-blue-600 hover:to-indigo-700 hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              >
+                  <CalendarIcon />
+                  Schedule Appointment
+              </a>
+              <a
+                  href="mailto:yshraddha92@gmail.com"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 px-3 py-2 text-white font-medium shadow-lg hover:from-emerald-600 hover:to-teal-700 hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              >
+                  <EmailIcon />
+                  yshraddha92@gmail.com
+              </a>
+              <a
+                  href="https://shraddhayamyar.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 px-3 py-2 text-white font-medium shadow-lg hover:from-violet-600 hover:to-purple-700 hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              >
+                  <GlobeIcon />
+                  shraddhayamyar.com
+              </a>
             <a 
               href="./images/ShraddhaYamyarResume.pdf" 
               target="_blank" 
