@@ -261,6 +261,7 @@ export default function Portfolio() {
             <UserIcon />
             About
           </h2>
+          <hr className="h-px my-4 bg-gray-200 border-0" />
           <p className="mt-3 text-neutral-700 leading-7">
             Embedded Hardware Design Engineer with 3+ years of experience in automotive safety systems. Skilled in
             circuit design, PCB development, hardware validation, and microcontroller interfacing (CAN, LIN, SPI, I²C).
@@ -277,7 +278,7 @@ export default function Portfolio() {
                 <BriefcaseIcon />
                 Experience
               </h2>
-              <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"/>
+              <hr className="h-px my-4 bg-gray-200 border-0" />
               <div className="mt-6 grid gap-6">
                   {EXPERIENCE.map((exp) => (
                       <article key={exp.company} className=" bg-white  ring-black/5">
@@ -321,6 +322,7 @@ export default function Portfolio() {
               <AcademicCapIcon />
               Education
             </h2>
+            <hr className="h-px my-4 bg-gray-200 border-0" />
             <ul className="mt-4 space-y-3">
               {EDUCATION.map((e, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -339,6 +341,7 @@ export default function Portfolio() {
               <DocumentTextIcon />
               Certifications
             </h2>
+            <hr className="h-px my-4 bg-gray-200 border-0" />
             <ul className="mt-4 list-disc pl-6 space-y-2 text-neutral-800">
               {CERTS.map((c) => (
                 <li key={c}>{c}</li>
@@ -356,6 +359,7 @@ export default function Portfolio() {
               <WrenchScrewdriverIcon />
               Skills
             </h2>
+            <hr className="h-px my-4 bg-gray-200 border-0" />
             <div className="mt-4 flex flex-wrap gap-2">
               {TAGS.map((t) => (
                 <span key={t} className="rounded-lg bg-neutral-100 px-3 py-1 text-sm ring-1 ring-black/5">{t}</span>
@@ -368,6 +372,7 @@ export default function Portfolio() {
               <TrophyIcon />
               Awards & Extras
             </h2>
+            <hr className="h-px my-4 bg-gray-200 border-0" />
             <ul className="mt-4 list-disc pl-6 space-y-2 text-neutral-800">
               {AWARDS.map((a) => (
                 <li key={a}>{a}</li>
@@ -386,6 +391,7 @@ export default function Portfolio() {
             <ChatBubbleLeftRightIcon />
             Get in touch
           </h2>
+          <hr className="h-px my-4 bg-gray-200 border-0" />
           <p className="mt-3 text-neutral-700">Open to opportunities in embedded hardware, validation, and functional safety.</p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
               <a
