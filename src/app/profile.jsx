@@ -135,16 +135,20 @@ export default function Portfolio() {
     <main className="min-h-screen bg-neutral-50 text-neutral-900">
       {/* Header / Hero */}
       <header className="relative isolate">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-sky-50 to-violet-50" />
+        <div 
+          className="absolute inset-0 -z-10 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: 'url(images/background.jpg)' }}
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50/70 via-sky-50/70 to-violet-50/70" />
         <div className="mx-auto max-w-6xl px-6 py-9 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] items-center gap-8">
             <img
-              src="images/profile.jpg"
+              src="images/profile.jpeg"
               alt="Profile headshot placeholder"
               className="h-28 w-28 md:h-36 md:w-36 rounded-full object-cover ring-4 ring-white shadow-lg"
             />
             <div>
-              <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+              <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-neutral-700">
                 Shraddha Yamyar
               </h1>
               <p className="mt-2 text-lg md:text-xl text-neutral-700">
@@ -196,55 +200,60 @@ export default function Portfolio() {
       </header>
 
       {/* About */}
-      <section id="about" className="mx-auto max-w-6xl px-6 py-12">
-        <h2 className="text-xl md:text-2xl font-bold">About</h2>
-        <p className="mt-3 text-neutral-700 leading-7">
-          Embedded Hardware Design Engineer with 3+ years of experience in automotive safety systems. Skilled in
-          circuit design, PCB development, hardware validation, and microcontroller interfacing (CAN, LIN, SPI, I²C).
-          Interested in functional safety, embedded system reliability, and design optimization, with a solid grasp of
-          requirement analysis, HW/SW integration, design calculations, simulation, PCB layout, and test methodologies.
-        </p>
-      </section>
-
-      {/* Experience */}
-      <section id="experience" className="mx-auto max-w-6xl px-6 py-3">
-        <h2 className="text-xl md:text-2xl font-bold">Experience</h2>
-        <div className="mt-6 grid gap-6">
-          {EXPERIENCE.map((exp) => (
-            <article key={exp.company} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold">{exp.role} · {exp.company}</h3>
-                  <p className="text-sm text-neutral-600">{exp.location}</p>
-                </div>
-                <p className="text-sm font-medium text-neutral-700">{exp.period}</p>
-              </div>
-              <ul className="mt-4 list-disc pl-6 text-neutral-800 space-y-2">
-                {exp.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
-
-              {/* Subprojects */}
-              <div className="mt-6 grid gap-4">
-                {exp.subprojects.map((sp) => (
-                  <div key={sp.name} className="rounded-xl bg-neutral-50 p-4 ring-1 ring-black/5">
-                    <h4 className="font-semibold">{sp.name}</h4>
-                    <ul className="mt-2 list-disc pl-6 space-y-1 text-neutral-800">
-                      {sp.bullets.map((b, i) => (
-                        <li key={i}>{b}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
+      <section id="about" className="mx-auto max-w-6xl px-6 pt-6 pb-3">
+        <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+          <h2 className="text-xl md:text-2xl font-bold">About</h2>
+          <p className="mt-3 text-neutral-700 leading-7">
+            Embedded Hardware Design Engineer with 3+ years of experience in automotive safety systems. Skilled in
+            circuit design, PCB development, hardware validation, and microcontroller interfacing (CAN, LIN, SPI, I²C).
+            Interested in functional safety, embedded system reliability, and design optimization, with a solid grasp of
+            requirement analysis, HW/SW integration, design calculations, simulation, PCB layout, and test methodologies.
+          </p>
         </div>
       </section>
 
-      {/* Education & Certifications */}
-      <section id="education" className="mx-auto max-w-6xl px-6 py-12">
+      {/* Experience */}
+      <section id="experience" className="mx-auto max-w-6xl px-6 pt-6 pb-6">
+          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+              <h2 className="text-xl md:text-2xl font-bold">Experience</h2>
+              <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"/>
+              <div className="mt-6 grid gap-6">
+                  {EXPERIENCE.map((exp) => (
+                      <article key={exp.company} className=" bg-white  ring-black/5">
+                          <div className="flex flex-wrap items-baseline justify-between gap-2">
+                              <div>
+                                  <h3 className="text-lg md:text-xl font-semibold">{exp.role} · {exp.company}</h3>
+                                  <p className="text-sm text-neutral-600">{exp.location}</p>
+                              </div>
+                              <p className="text-sm font-medium text-neutral-700">{exp.period}</p>
+                          </div>
+                          <ul className="mt-4 list-disc pl-6 text-neutral-800 space-y-2">
+                              {exp.bullets.map((b, i) => (
+                                  <li key={i}>{b}</li>
+                              ))}
+                          </ul>
+
+                          {/* Subprojects */}
+                          <div className="mt-6 grid gap-4">
+                              {exp.subprojects.map((sp) => (
+                                  <div key={sp.name} className="rounded-xl bg-neutral-50 p-4 ring-1 ring-black/5">
+                                      <h4 className="font-semibold">{sp.name}</h4>
+                                      <ul className="mt-2 list-disc pl-6 space-y-1 text-neutral-800">
+                                          {sp.bullets.map((b, i) => (
+                                              <li key={i}>{b}</li>
+                                          ))}
+                                      </ul>
+                                  </div>
+                              ))}
+                          </div>
+                      </article>
+                  ))}
+              </div>
+          </div>
+      </section>
+
+        {/* Education & Certifications */}
+      <section id="education" className="mx-auto max-w-6xl px-6 pt-6 pb-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
             <h2 className="text-xl md:text-2xl font-bold">Education</h2>
@@ -273,7 +282,7 @@ export default function Portfolio() {
       </section>
 
       {/* Skills & Awards */}
-      <section id="skills" className="mx-auto max-w-6xl px-6 py-6">
+      <section id="skills" className="mx-auto max-w-6xl px-6 pt-3 pb-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
             <h2 className="text-xl md:text-2xl font-bold">Skills</h2>
@@ -298,7 +307,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-12">
+      <section id="contact" className="mx-auto max-w-6xl px-6 pt-3 pb-12">
         <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
           <h2 className="text-xl md:text-2xl font-bold">Get in touch</h2>
           <p className="mt-3 text-neutral-700">Open to opportunities in embedded hardware, validation, and functional safety.</p>
